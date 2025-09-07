@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Image Downloader (saveAs:false)",
+  "version": "1.0",
+  "description": "Scans pages for images every 100ms and downloads unseen images (saveAs: false). Records downloaded URLs in storage.",
+  "permissions": [
+    "downloads",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://aistudio.google.com/"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Open Gallery"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://aistudio.google.com/*"],
+      "js": ["content_script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "16": "download.png"
+  }
+}
