@@ -3,7 +3,7 @@
 ### chrome plugin
 1. Download the repo
 2. Open the chrome with developer mode enabled. "Load unpacked" -> Choose "plugin" folder.
-3. It should start and automatically download all generated images in aistudio automatically to the default (downloads) folder.
+3. It should start and automatically download all generated images in aistudio to the default (downloads) folder.
 
 ### editing tool
 1. Download nodejs (i used v16.20.2)
